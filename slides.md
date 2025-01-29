@@ -24,11 +24,10 @@ transition: slide-left
 mdc: true
 ---
 
-# Rebased, not merged
-
-<br><br>
-
-### come e perché mantenere una *git history* il più lineare possibile
+<div class="h-100 flex flex-col justify-center">
+    <h1>Rebased, not merged</h1>
+    <div>come e perché mantenere una <em>git history</em> il più lineare possibile</div>
+</div>
 
 <!-- Setting `pull.rebase = true` in the Git config is a great way to avoid unnecessary merge commits and keep the Git history cleaner. However, it's important to educate your team about some **changes in behavior** they might encounter after enabling this setting, especially since they're used to their IDE handling Git operations for them. Here's what they might notice: -->
 
@@ -71,12 +70,11 @@ C'è una strategia alternativa: **rebase**. Con questo comando git, invece di ef
 layout: center
 ---
 
-# Un grosso vantaggio
-
-### Storia lineare
+# Un grosso vantaggio: una storia lineare
 Non ci sono più i *merge commit*, e non verranno mantenuti nella *git history* i nostri branch **locali temporanei**...
 
 <img v-click src="./assets/git-history-rotated.png" class="mt-8 block mx-auto" />
+<!-- TODO: add meme: no more! -->
 
 ---
 layout: center
@@ -84,27 +82,34 @@ layout: center
 
 # Vantaggi di una storia lineare
 - Maggiore facilità di visualizzazione
-- Possibilità di facile *rollback* (`git revert <commit #>`)
+- Maggiore facilità nel *debugging* (`git bisect`)
+- Possibilità di facile *rollback* (`git revert`)
+- Maggiore facilità nel portare codice da un branch all'altro (`git cherry-pick` utile per portare changes da v4 in *shared-dataset*)
 
+---
+layout: center
 ---
 
 # Svantaggi
 - ### Alcuni cambi nel workflow legato al `git pull`
-In particolare sarà sempre necessario fare lo *stash* delle modifiche presenti non committate prima di poter pullare
+    - In particolare sarà sempre necessario fare lo *stash* delle modifiche presenti non committate prima di poter pullare
 
 <!-- <div v-click>boom baby</div> -->
 
-- ### Piccola possibilità di *maggiore* difficoltà nella gestione di *merge conflicts*
-    - gestire conflitti
+- ### Cambio nella gestione dei conflictti
+    - gestire conflitti (nessuna differenza)
     - `git rebase --continue`
+    - In rari casi potrebbe rendersi necessario risolvere lo stesso conflitto più di una volta...
 
-<div class="flex justify-around">
-    <div v-click>
-        `git rebase --abort` -> `git pull --no-rebase`
-    </div>
-    <div v-click>
-        <code>git rebase --abort</code> -> `git pull --no-rebase`
-    </div>
+---
+layout: center
+---
+
+## In questi casi si giustifica semplificare usando la classica merge!
+<div class="flex flex-col justify-center items-center mt-8">
+    <div v-click><code>git rebase --abort</code></div>
+    <div v-click><code>git pull --no-rebase</code></div>
+    <div v-click class="text-red">Linea di comando necessaria!</div>
 </div>
 
 ---
@@ -115,9 +120,8 @@ In particolare sarà sempre necessario fare lo *stash* delle modifiche presenti 
 `git config pull.rebase true`
 
 ## Visual Studio
-Tools > Options
-
-<img src="./assets/vs-options.png" class="w-100" />
+Tools > Options > Git Repository Settings > Rebase local branch when pulling
+> È possibile configurarlo a livello globale oppure a livello di repository (consigliata la seconda)
 
 ---
 layout: image
@@ -125,4 +129,9 @@ image: ./assets/vs-options.png
 ---
 
 ---
+layout: cover
+# image: ./assets/bond-martini-2.webp
+background: ./assets/bond-martini-2.webp
+---
 
+<h3 class="mt-80">Grazie per l'attenzione</h3>
