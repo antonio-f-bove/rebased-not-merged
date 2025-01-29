@@ -5,7 +5,7 @@ theme: seriph
 # like them? see https://unsplash.com/collections/94734566/slidev
 # background: ./shaken-not-stirred.jpg
 layout: image-right
-image: ./assets/shaken-not-stirred.jpg
+image: /public/shaken-not-stirred.jpg
 # some information about your slides (markdown enabled)
 title: Rebased, not merged
 info: |
@@ -72,8 +72,8 @@ layout: center
 Non ci sono più i *merge commit*, e non verranno mantenuti nella *git history* i nostri branch **locali temporanei**...
 
 <div v-click class="flex flex-col items-center">
-  <div><img src="./assets/git-history-rotated.png" class="mt-8 block mx-auto" /></div>
-  <div><img class="h-70 pt-4" src="./assets/stop-arnold.png" /></div>
+  <div><img src="/public/git-history-rotated.png" class="mt-8 block mx-auto" /></div>
+  <div><img class="h-70 pt-4" src="/public/stop-arnold.png" /></div>
 </div>
 
 ---
@@ -134,13 +134,13 @@ Tools > Options > Git Repository Settings > Rebase local branch when pulling => 
 
 ---
 layout: image
-image: ./assets/vs-options.png
+image: /public/vs-options.png
 ---
 
 ---
 layout: cover
-# image: ./assets/bond-martini-2.webp
-background: ./assets/bond-martini-2.webp
+# image: /public/bond-martini-2.webp
+background: /public/bond-martini-2.webp
 ---
 
 <h3 class="mt-80">Grazie per l'attenzione</h3>
