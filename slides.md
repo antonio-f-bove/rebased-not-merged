@@ -87,19 +87,28 @@ layout: center
 - Maggiore facilità nel portare codice da un branch all'altro (`git cherry-pick` utile per portare changes da v4 in *shared-dataset*)
 
 ---
-layout: center
+layout: cover
 ---
 
 # Svantaggi
-- ### Alcuni cambi nel workflow legato al `git pull`
-    - In particolare sarà sempre necessario fare lo *stash* delle modifiche presenti non committate prima di poter pullare
 
-<!-- <div v-click>boom baby</div> -->
+---
+layout: center
+---
 
-- ### Cambio nella gestione dei conflictti
-    - gestire conflitti (nessuna differenza)
-    - `git rebase --continue`
-    - In rari casi potrebbe rendersi necessario risolvere lo stesso conflitto più di una volta...
+# Alcuni cambi nel workflow legato al `git pull`
+- In particolare sarà sempre necessario fare lo *stash* delle modifiche presenti non committate prima di poter pullare
+- Mitigabile con un'altra configurazione: `git config rebase.autostash true`
+- Attenzione: la riapplicazione automatica dello stash potrebbe introdurre conflitti non triviali
+
+---
+layout: center
+---
+
+# Cambio nella gestione dei conflictti
+- gestire conflitti (nessuna differenza)
+- `git rebase --continue`
+- In rari casi potrebbe rendersi necessario risolvere lo stesso conflitto più di una volta...
 
 ---
 layout: center
@@ -135,3 +144,16 @@ background: ./assets/bond-martini-2.webp
 ---
 
 <h3 class="mt-80">Grazie per l'attenzione</h3>
+
+---
+layout: center
+---
+
+# Bonus
+
+copia-incolla nel terminale per settare tutto
+
+```bash
+git config pull.rebase true
+git config rebase.autostash true
+```
