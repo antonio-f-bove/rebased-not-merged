@@ -7,12 +7,10 @@ theme: seriph
 layout: image-right
 image: ./assets/shaken-not-stirred.jpg
 # some information about your slides (markdown enabled)
-title: Welcome to Slidev
+title: Rebased, not merged
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
+  come e perché mantenere una git history il più lineare possibile
+  
 # apply unocss classes to the current slide
 class: text-center
 # https://sli.dev/features/drawing
@@ -73,8 +71,10 @@ layout: center
 # Un grosso vantaggio: una storia lineare
 Non ci sono più i *merge commit*, e non verranno mantenuti nella *git history* i nostri branch **locali temporanei**...
 
-<img v-click src="./assets/git-history-rotated.png" class="mt-8 block mx-auto" />
-<!-- TODO: add meme: no more! -->
+<div v-click class="flex flex-col items-center">
+  <div><img src="./assets/git-history-rotated.png" class="mt-8 block mx-auto" /></div>
+  <div><img class="h-70 pt-4" src="./assets/stop-arnold.png" /></div>
+</div>
 
 ---
 layout: center
@@ -129,7 +129,7 @@ layout: center
 `git config pull.rebase true`
 
 ## Visual Studio
-Tools > Options > Git Repository Settings > Rebase local branch when pulling
+Tools > Options > Git Repository Settings > Rebase local branch when pulling => True
 > È possibile configurarlo a livello globale oppure a livello di repository (consigliata la seconda)
 
 ---
