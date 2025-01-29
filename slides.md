@@ -32,7 +32,7 @@ mdc: true
 ---
 layout: center
 # layout: image
-# image: assets/rebasing-vs-merging-diagram.png
+# image: /rebasing-vs-merging-diagram.png
 # backgroundSize: contain
 ---
 
@@ -40,7 +40,7 @@ layout: center
 
 ---
 layout: image-right
-image: assets/rebasing-vs-merging-diagram.png
+image: /rebasing-vs-merging-diagram.png
 backgroundSize: contain
 ---
 
@@ -53,7 +53,7 @@ La strategia di default di Git, quando si `git pull`, è la merge: in caso di di
 
 ---
 layout: image-left
-image: assets/rebasing-vs-merging-diagram.png
+image: /rebasing-vs-merging-diagram.png
 backgroundSize: contain
 ---
 
