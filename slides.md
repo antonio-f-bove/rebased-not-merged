@@ -96,18 +96,9 @@ layout: cover
 layout: center
 ---
 
-# Alcuni cambi nel workflow legato al `git pull`
-- In particolare sarà sempre necessario fare lo *stash* delle modifiche presenti non committate prima di poter pullare
-- Mitigabile con un'altra configurazione: `git config rebase.autostash true`
-- Attenzione: la riapplicazione automatica dello stash potrebbe introdurre conflitti non triviali
-
----
-layout: center
----
-
 # Cambio nella gestione dei conflictti
-- gestire conflitti (nessuna differenza)
-- `git rebase --continue`
+- la risoluzione dei conflitti funziona allo stesso modo... con una sostanziale differenza: il nostro branch si chiama *incoming*
+- `git rebase --continue` (client di VS dovrebbe occuparsene)
 - In rari casi potrebbe rendersi necessario risolvere lo stesso conflitto più di una volta...
 
 ---
@@ -120,6 +111,15 @@ layout: center
     <div v-click><code>git pull --no-rebase</code></div>
     <div v-click class="text-red">Linea di comando necessaria!</div>
 </div>
+
+---
+layout: center
+---
+
+# Alcuni cambi nel workflow legato al `git pull`
+- In particolare sarà sempre necessario fare lo *stash* delle modifiche presenti non committate prima di poter pullare
+- Mitigabile con un'altra configurazione: `git config rebase.autostash true`
+- Attenzione: la riapplicazione automatica dello stash potrebbe introdurre conflitti non triviali
 
 ---
 
@@ -149,7 +149,7 @@ background: /bond-martini-2.webp
 layout: center
 ---
 
-# Bonus
+# tldr;
 
 copia-incolla nel terminale per settare tutto
 
